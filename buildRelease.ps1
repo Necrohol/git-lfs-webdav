@@ -1,4 +1,4 @@
-$package = "github.com/mpotthoff/git-lfs-webdav"
+$package = "github.com/Necrohol/git-lfs-webdav"
 $projectname = "git-lfs-webdav"
 $outputdir = "build"
 
