@@ -34,9 +34,17 @@ $env:GOOS="windows"
 $env:GOARCH="amd64"
 go build -ldflags "-s -w -X $package/internal.Version=$version-$hash" -o "$outputdir/$projectname-windows-amd64.exe"
 
+$env:GOOS="windows"
+$env:GOARCH="arm64"
+go build -ldflags "-s -w -X $package/internal.Version=$version-$hash" -o "$outputdir/$projectname-windows-arm64.exe"
+
 $env:GOOS="linux"
 $env:GOARCH="amd64"
 go build -ldflags "-s -w -X $package/internal.Version=$version-$hash" -o "$outputdir/$projectname-linux-amd64"
+
+$env:GOOS="linux"
+$env:GOARCH="arm64"
+go build -ldflags "-s -w -X $package/internal.Version=$version-$hash" -o "$outputdir/$projectname-linux-arm64"
 
 $env:GOOS="darwin"
 $env:GOARCH="amd64"
